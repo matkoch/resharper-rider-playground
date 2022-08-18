@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Spectre.Console" Version="0.44.0" />
+    </ItemGroup>
+
+    <!-- Navigate to CSharp10.GlobalUsings.g.cs after building the project -->
+    <ItemGroup>
+        <Using Include="System.Math" Static="True" />
+        <Using Include="Spectre.Console.AnsiConsole" Alias="Console" />
+    </ItemGroup>
+
+</Project>

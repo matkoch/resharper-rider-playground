@@ -2,7 +2,7 @@ namespace CSharp11;
 
 public static class ListPatterns
 {
-    private static bool IsSorted(Span<int> numbers)
+    private static bool IsSorted(int[] numbers)
     {
         return numbers switch
         {
