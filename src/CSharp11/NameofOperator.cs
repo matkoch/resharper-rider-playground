@@ -7,12 +7,12 @@ public static class NameofOperator
     public const string Foo = "Foo";
     public const string Bar = "Bar";
 
-    public static void Log(
+    public static void Calculate(
         int number,
         [CallerArgumentExpression("number")] string? expression = null)
     {
         Console.WriteLine($"{expression} = {number}");
     }
 
-    public static void Start() => Log(1030 + 307);
+    public static void Start() => Calculate(1030 + 307);
 }

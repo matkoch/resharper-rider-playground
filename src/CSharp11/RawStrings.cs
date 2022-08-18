@@ -2,6 +2,9 @@ namespace CSharp11;
 
 public static class RawStrings
 {
+    // [Obsolete("""
+    //     It also works in attributes!
+    //     """)]
     public static void Start()
     {
         var simpleRawJson = """{"name":"Lucy","age":43}""".Dump();
@@ -16,6 +19,6 @@ public static class RawStrings
             }
             """.Dump(); // <- This denotes the indentation
 
-        var interpolatedJson = $$"""This is a {{{ 1300 + 37}}} interpolation!""".Dump();
+        var interpolatedJson = $$"""This is a {{{1300 + 37}}} interpolation!""".Dump();
     }
 }

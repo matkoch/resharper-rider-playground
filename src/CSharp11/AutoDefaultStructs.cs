@@ -15,7 +15,7 @@ public class AutoDefaultStructs
 
         public Credentials(string token)
         {
-            // No init of Username
+            // No init of Username, previously an error
             Password = token;
         }
     }

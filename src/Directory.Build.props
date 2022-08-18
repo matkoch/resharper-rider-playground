@@ -1,0 +1,11 @@
+<Project>
+
+    <PropertyGroup>
+        <NoWarn>CA2211;CS0219;CS8618</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+    </ItemGroup>
+
+</Project>

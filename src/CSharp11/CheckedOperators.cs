@@ -20,7 +20,7 @@ public static class CheckedOperators
         public static IntVector operator checked +(IntVector a, IntVector b)
             => new(checked(a.X + b.X), checked(a.Y + b.Y));
 
-        // QF: create matching checked
+        // QF: create matching checked operator
         public static IntVector operator -(IntVector a, IntVector b)
             => new(a.X - b.X, a.Y - b.Y);
     }
