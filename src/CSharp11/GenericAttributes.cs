@@ -14,6 +14,7 @@ public static class GenericAttributes
     {
         private T? _context;
 
+        // Challenge: can we also not use reflection?
         public void Setup() => _context = Activator.CreateInstance<T>();
         public void Cleanup() => _context!.Dispose();
     }
@@ -22,23 +23,5 @@ public static class GenericAttributes
     {
         public MyContext() => "Setup".Dump();
         public void Dispose() => "Cleanup".Dump();
-    }
-}
-
-public static class MultilineInterpolation
-{
-    public static void Start()
-    {
-        var allEvents = new [] {new {Name = "Foo", Date = DateTime.Today}, new {Name = "Bar", Date = DateTime.Today}};
-
-        $"We welcome you to our {allEvents.Where(x => x.Date >= DateTime.Today).OrderBy(x => x.Name).Select(x => x.Name).JoinComma()} events.".Dump();
-
-        $"We welcome you to our {
-            allEvents
-                .Where(x => x.Date >= DateTime.Today)
-                .OrderBy(x => x.Name)
-                .Select(x => x.Name)
-                .JoinComma()
-        } events.".Dump();
     }
 }

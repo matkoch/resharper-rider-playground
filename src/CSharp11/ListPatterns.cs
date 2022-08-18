@@ -1,8 +1,11 @@
+using System.Numerics;
+
 namespace CSharp11;
 
 public static class ListPatterns
 {
-    private static bool IsSorted(int[] numbers)
+    private static bool IsSorted<T>(Span<T> numbers)
+      where T : INumber<T>
     {
         return numbers switch
         {

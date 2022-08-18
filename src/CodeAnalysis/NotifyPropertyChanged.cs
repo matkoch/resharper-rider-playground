@@ -7,15 +7,19 @@ public static class NotifyPropertyChanged
 {
     private class Person : ObservableBase
     {
+        private string _name;
+
         // CA: To property with SetField change notification
         // ... try in a LangVersion 'preview' project for latest C# 11 syntax
-        public string Name { get; set; }
+        public string Name
+        {
+            get => _name;
+            set => SetField(ref _name, value);
+        }
     }
 
     private abstract class ObservableBase : INotifyPropertyChanged
     {
-        #region Generated from INotifyPropertyChanged inheritance
-
         public event PropertyChangedEventHandler? PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
@@ -30,7 +34,5 @@ public static class NotifyPropertyChanged
             OnPropertyChanged(propertyName);
             return true;
         }
-
-        #endregion
     }
 }

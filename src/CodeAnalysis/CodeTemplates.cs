@@ -9,16 +9,16 @@ public static class CodeTemplates
     {
         // QF: convert to new API (in file, project, solution)
         // Challenge: make this a warning instead of an error
-        Assert.That(true, Is.True);
-        Assert.That(true, Is.True);
-        Assert.That(true, Is.True);
+        Assert.That(1 < 5, Is.True);
+        Assert.That(string.IsNullOrWhiteSpace(""), Is.True);
+        Assert.That(DateTime.Today.Year < 2022, Is.True);
         Assert.That(true, Is.True);
 
         // Challenge: add another code template that converts Assert.That(..., Is.False)
+        Assert.That(true, Is.False);
         Assert.That(false, Is.False);
-        Assert.That(false, Is.False);
-        Assert.That(false, Is.False);
-        Assert.That(false, Is.False);
+        Assert.That(!true, Is.False);
+        Assert.That(!false, Is.False);
     }
 
     public class Assert
