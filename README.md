@@ -1,3 +1,12 @@
+# ReSharper & Rider Playground
+
+<!-- TOC -->
+* [Code Analysis](#code-analysis)
+  * [General](#general)
+  * [C# 11](#c#-11)
+  * [C# 10](#c#-10)
+<!-- TOC -->
+
 # Code Analysis
 
 ## General
@@ -23,3 +32,13 @@
 - [Global Usings in CSharp Files](src/CSharp10/GlobalUsings.cs)
 - [Interpolated String Handlers](src/CSharp10/InterpolatedStringHandler.cs)
 - [Constant String Interpolation](src/CSharp10/ConstantInterpolation.cs)
+
+# Code Editing
+
+- [Strings](src/CodeEditing/Strings.cs)
+- [Postfix Templates](src/CodeEditing/PostfixTemplates.cs)
+- [Complete Statement](src/CodeEditing/CompleteStatement.cs)
+- [Expand/Shrink Selection](src/CodeEditing/ExpandShrinkSelection.cs)
+- [Multi-Caret](src/CodeEditing/MultiCaret.cs)
+
+[//]: # (Smurfette was here)

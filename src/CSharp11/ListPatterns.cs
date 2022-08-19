@@ -16,10 +16,7 @@ public static class ListPatterns
             [var first, var second, ..] when first > second => false,
 
             // If none of the above conditions are met, proceed with the rest
-            [_, .. var rest] => IsSorted(rest),
-
-            // Throw if numbers is null
-            _ => throw new ArgumentNullException(nameof(numbers))
+            [_, .. var rest] => IsSorted(rest)
         };
     }
 
@@ -45,6 +42,6 @@ public static class ListPatterns
 
     private static void DumpIsSorted(this int[] array)
     {
-        Console.WriteLine($"... it's {(IsSorted(array) ? "sorted" : "not sorted")}");
+        Console.WriteLine($"... it's {(IsSorted(array.AsSpan()) ? "sorted" : "not sorted")}");
     }
 }
