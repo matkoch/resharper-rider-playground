@@ -5,7 +5,7 @@ public class CompleteStatement
     // Use 'Complete Statement'
     public void M(int number)
     {
-        // Challenge: return from the method without using 'return' completion or typing ; manually
+        // Challenge: return from the method without using code completion or manually typing ;
 
         // Challenge: create an if-statement with {} block but without manually typing { or }
 

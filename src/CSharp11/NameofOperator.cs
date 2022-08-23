@@ -4,6 +4,8 @@ namespace CSharp11;
 
 public static class NameofOperator
 {
+    // CA: capture constant name
+    // Challenge: capture in whole file
     public const string Foo = "Foo";
     public const string Bar = "Bar";
 
