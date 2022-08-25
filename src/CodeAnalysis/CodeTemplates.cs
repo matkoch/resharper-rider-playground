@@ -8,7 +8,7 @@ public static class CodeTemplates
     public static void Start()
     {
         // QF: convert to new API (in file, project, solution)
-        // Challenge: make this a warning instead of an error
+        // Challenge: make this an error instead of a warning
         Assert.That(1 < 5, Is.True);
         Assert.That(string.IsNullOrWhiteSpace(""), Is.True);
         Assert.That(DateTime.Today.Year < 2022, Is.True);
@@ -25,7 +25,7 @@ public static class CodeTemplates
     {
         [CodeTemplate(
             searchTemplate: "Assert.That($arg$, Is.True)",
-            Message = $"ERROR: This API is deprecated, use '{nameof(Assert)}.{nameof(That)}' instead",
+            Message = $"WARNING: This API is deprecated, use '{nameof(Assert)}.{nameof(That)}' instead",
             ReplaceTemplate = "Assert.IsTrue($arg$)",
             ReplaceMessage = $"Convert to '{nameof(Assert)}.{nameof(IsTrue)}'",
             SuppressionKey = "assert-that-true")]

@@ -10,11 +10,13 @@ public class PostfixTemplates
     //   number.yield
     public IEnumerable<int> FilterEvenNumbers(int[] numbers)
     {
+        return null;
     }
 
     // Challenge: create and return a new StringBuilder with .new and .return
     // Challenge: create and return a new StringBuilder with .var and .return (without .new)
     public StringBuilder CreateStringBuilder()
     {
+        return null;
     }
 }
