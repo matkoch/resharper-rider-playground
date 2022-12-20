@@ -1,9 +1,17 @@
 using Xunit;
+using Xunit.Abstractions;
 
 namespace UnitTesting;
 
 public class NestedExpressionsTest
 {
+    private readonly ITestOutputHelper _testOutputHelper;
+
+    public NestedExpressionsTest(ITestOutputHelper testOutputHelper)
+    {
+        _testOutputHelper = testOutputHelper;
+    }
+
     [Fact]
     public void Test()
     {
@@ -17,10 +25,14 @@ public class NestedExpressionsTest
             => people.ToList().ForEach(PrintPerson);
 
         void PrintPerson(string s1)
-            => Console.WriteLine(s1);
+        {
+            _testOutputHelper.WriteLine(s1);
+        }
 
-        // Challenge: create a dependent breakpoint to only break in
+        // Challenge: step into PrintPeople right away (without in-out)
         PrintPeople(FilterPeople(GetPeople()).ToArray());
-        PrintPeople(new[] { "Christina", "Jules", "Aurora" });
+        var enumerable = new[] { "Christina", "Jules", "Aurora" };
+        // Challenge: create a dependent breakpoint to only break in PrintPerson for the following call
+        PrintPeople(enumerable);
     }
 }
