@@ -4,6 +4,17 @@ namespace CSharp11;
 
 public static class ListPatterns
 {
+    private static void ParseArgs(string[] args)
+    {
+        // CA: merge into pattern
+        if (args.Length == 2 && args[0] == "--help" && args[1] is var topic)
+            $"So you want to learn about {topic}".Dump();
+
+        // CA: to access expression
+        if (args is { Length: 2 })
+            "There are 2 arguments".Dump();
+    }
+
     private static bool IsSorted<T>(Span<T> numbers)
       where T : INumber<T>
     {

@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace CSharp11;
 
 public static class RawStrings
@@ -7,11 +9,16 @@ public static class RawStrings
     //     """)]
     public static void Start()
     {
+        // CA: convert to raw
+        var verbatimString = @"{
+  ""sdk"": {
+        ""allowPrerelease"": true
+    }
+}";
+        
         var simpleRawJson = """{"name":"Lucy","age":43}""".Dump();
-
-        // Imagine JSON used 3 double-quotes as delimiter...
-        var tripleQuotesJson = """"{"""name""":"""Lucy""","""age""":43}"""".Dump();
-
+        
+        // lang=JSON
         var multilineJson = """
             {
                 "name": "Lucy",
@@ -19,6 +26,12 @@ public static class RawStrings
             }
             """.Dump(); // <- This denotes the indentation
 
-        var interpolatedJson = $$"""This is a {{{1300 + 37}}} interpolation!""".Dump();
+        // lang=HTML
+        var multilineHtml = """
+            <html>
+            </html>
+            """;
+
+        var interpolatedJson = $"""This is a {multilineJson} interpolation!""".Dump();
     }
 }

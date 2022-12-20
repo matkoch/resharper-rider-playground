@@ -22,7 +22,10 @@ public class Strings
 "; // <- Paste before this quote
 
         // Challenge: move to the right guideline and split the string using enter
-        var lorem = "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+        var lorem = "Lorem ipsum is simply dummy text of the printing and typesetting industry." +
+                    " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+                    " when an unknown printer took a galley of type and scrambled it to make a " +
+                    "type specimen book.";
 
         // Challenge: replace <number> with the number passed to this method using
         //    1. CA: To string interpolation

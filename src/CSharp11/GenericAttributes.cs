@@ -4,7 +4,7 @@ namespace CSharp11;
 
 public static class GenericAttributes
 {
-    [Context<MyContext>]
+    [Context<SpecialContext>]
     public static void Start()
     {
     }
@@ -19,9 +19,9 @@ public static class GenericAttributes
         public void Cleanup() => _context!.Dispose();
     }
 
-    private class MyContext : IDisposable
+    private class SpecialContext : IDisposable
     {
-        public MyContext() => "Setup".Dump();
+        public SpecialContext() => "Setup".Dump();
         public void Dispose() => "Cleanup".Dump();
     }
 }

@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 
 namespace CSharp10;
 
@@ -9,7 +8,7 @@ public static class InterpolatedStringHandler
     {
         var logger = new Logger();
         // Goto definition on interpolation holes
-        logger.LogDebug($"This is an {"interpolated"} string handled by {nameof(DebugLoggerStringHandler)}");
+        logger.LogDebug($"This is an {new object()} string handled by {nameof(DebugLoggerStringHandler)}");
 
         // TODO: should convert
         logger.LogDebug("This is a {0} string that can be converted to {1}", "formatted", nameof(DebugLoggerStringHandler));
@@ -30,7 +29,7 @@ public static class InterpolatedStringHandler
             _builder = new(literalLength, formattedCount);
         }
 
-        // Find usages of below Append* methods
+        // Find usages of below Append methods
 
         public void AppendLiteral(string value)
             => _builder.AppendLiteral(value);

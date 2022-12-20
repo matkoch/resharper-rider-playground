@@ -19,4 +19,14 @@ public class PostfixTemplates
     {
         return null;
     }
+
+    public void VoidCompletion()
+    {
+        StringBuilder builder = default;
+        builder
+            .AppendLine("")
+            .AppendLine("");
+
+        StreamWriter writer = default;
+    }
 }

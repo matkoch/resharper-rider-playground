@@ -11,5 +11,15 @@ public class ConstantInterpolation
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public string ToString(string param = nameof(FirstName) + "." + nameof(LastName))
+        {
+            return param switch
+            {
+                nameof(FirstName) + "." + nameof(LastName) => $"{FirstName}.{LastName}",
+                nameof(LastName) + "." + nameof(FirstName) => $"{LastName}.{FirstName}",
+                _ => throw new NotSupportedException(param)
+            };
+        }
     }
 }
