@@ -32,6 +32,19 @@ public static class RawStrings
             </html>
             """;
 
+
+        var defaultValue = "1";
+
+        // lang=CSHARP
+        var multilineCsharp = """
+            public class Foo
+            {
+                public void Bar(int v = ) // CA: insert interpolation argument
+                {
+                }
+            }
+            """;
+
         var interpolatedJson = $"""This is a {multilineJson} interpolation!""".Dump();
     }
 }
