@@ -5,7 +5,7 @@ public static class StaticAbstractInterfaceMembers
     public static void Start()
     {
         void AccessProperty<T>() where T : IWithStaticVirtual
-            => Console.WriteLine(T.Text);
+            => Console.WriteLine(T.Bar);
 
         void AccessPropertyOld<T>() where T : IWithoutStaticAbstract, new()
             => Console.WriteLine(new T().Text);
@@ -19,12 +19,14 @@ public static class StaticAbstractInterfaceMembers
         // Challenge: remove and create via
         //   1. generate menu
         //   2. code completion 'override'
-        public static string Text => "This is static";
+        public static string Foo => "value";
+        public static string Bar => "This is static";
     }
 
     private interface IWithStaticVirtual
     {
-        static abstract string Text { get; }
+        static abstract string Foo { get; }
+        static virtual string Bar => "foo";
     }
 
     private class Implementation2 : IWithoutStaticAbstract
