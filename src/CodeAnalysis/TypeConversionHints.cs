@@ -5,6 +5,9 @@ file class TypeConversionHints
     public Task Test()
     {
         Apply(new Vector3D());
+
+        // Alt-Enter on Conversion Hint | Configure Inlay Hints | Type Conversion Hints | Hide for Task(SettingsTask)
+        // jetbrains://Rider/settings?name=Editor--Inlay+Hints--C%23--Type+Conversion+Hints
         return Verify("obj");
     }
 

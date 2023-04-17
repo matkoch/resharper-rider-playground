@@ -6,16 +6,14 @@ public class Lookups
 
     public static void M(int key, object value)
     {
+        // QF: remove redundant lookup
         if (items.ContainsKey(key))
             items[key] = value;
         else
             items.Add(key, value);
 
+        // QF: simplify with TryAdd
         if (!items.ContainsKey(key)) items.Add(key, value);
         if (!items.ContainsKey(key)) items[key] = value;
-    }
-
-    private static void N()
-    {
     }
 }

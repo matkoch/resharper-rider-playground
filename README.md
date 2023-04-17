@@ -14,9 +14,13 @@
 - [INotifyPropertyChanged](src/CodeAnalysis/NotifyPropertyChanged.cs)
 - [SSR Code Templates](src/CodeAnalysis/CodeTemplates.cs)
 - [Cognitive Complexity](src/CodeAnalysis/CognitiveComplexity.cs)
+- [Collection Lookups](src/CodeAnalysis/Lookups.cs)
+- [Empty regions](src/CodeAnalysis/EmptyRegions.cs)
+- [Spell-Check for special values](src/CodeAnalysis/SpellChecking.json)
 
 ## [C# 11](src/CSharp11/CSharp11.csproj)
 
+- [Pattern Matching](src/CSharp11/PatternMatching.cs)
 - [List Patterns](src/CSharp11/ListPatterns.cs)
 - [`nameof` Operator](src/CSharp11/NameofOperator.cs)
 - [Raw Strings](src/CSharp11/RawStrings.cs)
@@ -25,6 +29,7 @@
 - [Span Pattern Matching](src/CSharp11/SpanPatternMatching.cs)
 - [`checked` Operators](src/CSharp11/CheckedOperators.cs)
 - [Auto-Default `struct`](src/CSharp11/AutoDefaultStructs.cs)
+- [Lambda return types](src/CSharp11/LambdaReturnType.cs)
 
 ## [C# 10](src/CSharp10/CSharp10.csproj)
 
@@ -41,5 +46,14 @@
 - [Complete Statement](src/CodeEditing/CompleteStatement.cs)
 - [Expand/Shrink Selection](src/CodeEditing/ExpandShrinkSelection.cs)
 - [Multi-Caret](src/CodeEditing/MultiCaret.cs)
+- [Null-Check Styles](src/CodeEditing/NullChecking.cs)
+- [Type Conversion Hints](src/CodeAnalysis/TypeConversionHints.cs)
+- [UnitTest Parameter Name Hints](src/UnitTesting/ParameterHints.cs)
+- [Reformat Preprocessor Directives](src/CodeEditing/PreprocessorDirectives.cs)
+- [Markdown Typing Assist](markdown.md)
+
+# Debugging
+
+- [String Visualizers](src/UnitTesting/StringVisualizers.cs)
 
 [//]: # (Smurfette was here)

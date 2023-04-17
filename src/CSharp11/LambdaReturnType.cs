@@ -4,6 +4,7 @@ file class LambdaReturnType
 {
     private static void M(Builder builder)
     {
+        // CA: Insert return type specification
         builder.Services.AddSingleton(_ =>
         {
             var connectionString = Environment.GetEnvironmentVariable("AzureWebJobsStorage");

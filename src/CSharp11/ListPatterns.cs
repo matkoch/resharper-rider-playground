@@ -10,6 +10,7 @@ public static class ListPatterns
         if (args.Length == 2 && args[0] == "--help" && args[1] is var topic)
             $"So you want to learn about {topic}".Dump();
 
+        // CA: Convert into list pattern
         if (args.Length == 0)
             "There are no arguments".Dump();
 

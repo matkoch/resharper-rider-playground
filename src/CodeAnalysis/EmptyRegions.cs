@@ -2,6 +2,7 @@ namespace CodeAnalysis;
 
 public class EmptyRegions
 {
+    // QF: Remove empty region (in solution)
     #region Empty
     #endregion
 
