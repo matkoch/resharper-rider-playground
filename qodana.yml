@@ -1,0 +1,7 @@
+version: "1.0"
+
+linter: jetbrains/qodana-dotnet:2023.1-eap
+failThreshold: 0
+
+dot-net:
+  solution: resharper-rider-playground.sln
