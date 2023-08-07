@@ -43,4 +43,9 @@
 - [Expand/Shrink Selection](src/CodeEditing/ExpandShrinkSelection.cs)
 - [Multi-Caret](src/CodeEditing/MultiCaret.cs)
 
+# Entity Framework
+
+- [Load required relations](src/EntityFrameworkEditing/EfCoreLoadRequiredRelations.cs)
+- [N+1](src/EntityFrameworkEditing/EfCoreNPlusOne.cs)
+
 [//]: # (Smurfette was here)
