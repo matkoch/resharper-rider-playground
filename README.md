@@ -14,6 +14,7 @@
 - [INotifyPropertyChanged](src/CodeAnalysis/NotifyPropertyChanged.cs)
 - [SSR Code Templates](src/CodeAnalysis/CodeTemplates.cs)
 - [Cognitive Complexity](src/CodeAnalysis/CognitiveComplexity.cs)
+- [Nullable Directives](src/CodeAnalysis/NullableDirectives.cs)
 
 ## [C# 11](src/CSharp11/CSharp11.csproj)
 
