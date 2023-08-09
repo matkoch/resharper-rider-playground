@@ -14,6 +14,7 @@
 - [INotifyPropertyChanged](src/CodeAnalysis/NotifyPropertyChanged.cs)
 - [SSR Code Templates](src/CodeAnalysis/CodeTemplates.cs)
 - [Cognitive Complexity](src/CodeAnalysis/CognitiveComplexity.cs)
+- [Nullable Directives](src/CodeAnalysis/NullableDirectives.cs)
 
 ## [C# 11](src/CSharp11/CSharp11.csproj)
 
@@ -41,5 +42,10 @@
 - [Complete Statement](src/CodeEditing/CompleteStatement.cs)
 - [Expand/Shrink Selection](src/CodeEditing/ExpandShrinkSelection.cs)
 - [Multi-Caret](src/CodeEditing/MultiCaret.cs)
+
+# Entity Framework
+
+- [Load required relations](src/EntityFrameworkEditing/EfCoreLoadRequiredRelations.cs)
+- [N+1](src/EntityFrameworkEditing/EfCoreNPlusOne.cs)
 
 [//]: # (Smurfette was here)
