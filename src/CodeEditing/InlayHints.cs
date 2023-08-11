@@ -11,7 +11,7 @@ public class InlayHints
         dict.Add(("Maarten", "Balliauw", null, true));
         dict.Add(("Rachel", "Appel", DateTime.Now, false));
 
-        if (dict.First() is ("Maarten", _, _, _))
+        if (dict.First() is ("Maarten", _, _, true))
             Console.WriteLine("HELP!");
     }
 }

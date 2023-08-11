@@ -5,13 +5,14 @@ public class LocalFunctions
 {
     public void M(bool? b)
     {
+        // QF: put after return
         void Create() => Console.WriteLine(nameof(Create));
-        void Delete() => Console.WriteLine(nameof(Delete));
 
         DoSomething(b switch
         {
             true => Create,
-            false => Delete
+            // Extract function
+            false => () => Console.WriteLine("Delete")
         });
     }
 
