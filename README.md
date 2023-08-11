@@ -15,6 +15,9 @@
 - [SSR Code Templates](src/CodeAnalysis/CodeTemplates.cs)
 - [Cognitive Complexity](src/CodeAnalysis/CognitiveComplexity.cs)
 - [Nullable Directives](src/CodeAnalysis/NullableDirectives.cs)
+- [Collection Lookups](src/CodeAnalysis/Lookups.cs)
+- [Empty regions](src/CodeAnalysis/EmptyRegions.cs)
+- [Spell-Check for special values](src/CodeAnalysis/SpellChecking.json)
 
 ## [C# 11](src/CSharp11/CSharp11.csproj)
 
@@ -42,6 +45,15 @@
 - [Complete Statement](src/CodeEditing/CompleteStatement.cs)
 - [Expand/Shrink Selection](src/CodeEditing/ExpandShrinkSelection.cs)
 - [Multi-Caret](src/CodeEditing/MultiCaret.cs)
+- [Null-Check Styles](src/CodeEditing/NullChecking.cs)
+- [Type Conversion Hints](src/CodeAnalysis/TypeConversionHints.cs)
+- [UnitTest Parameter Name Hints](src/UnitTesting/ParameterHints.cs)
+- [Reformat Preprocessor Directives](src/CodeEditing/PreprocessorDirectives.cs)
+- [Markdown Typing Assist](markdown.md)
+
+# Debugging
+
+- [String Visualizers](src/UnitTesting/StringVisualizers.cs)
 
 # Entity Framework
 

@@ -10,9 +10,13 @@ public static class ListPatterns
         if (args.Length == 2 && args[0] == "--help" && args[1] is var topic)
             $"So you want to learn about {topic}".Dump();
 
+        // CA: Convert into list pattern
+        if (args.Length == 0)
+            "There are no arguments".Dump();
+
         // CA: to access expression
-        if (args is { Length: 2 })
-            "There are 2 arguments".Dump();
+        if (args is { Length: 5 })
+            "There are 5 arguments".Dump();
     }
 
     private static bool IsSorted<T>(Span<T> numbers)
