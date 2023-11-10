@@ -1,8 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using AutoFixture.Xunit2;
 using Xunit;
 
 namespace UnitTesting;
 
+[SuppressMessage("Usage", "xUnit1026:Theory methods should use all of their parameters")]
 public class ParameterHints
 {
     [Theory]
