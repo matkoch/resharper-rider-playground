@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <NoWarn>CA2211;CS0219;CS8618</NoWarn>
+        <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
     </PropertyGroup>
 
     <ItemGroup>
