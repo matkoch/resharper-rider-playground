@@ -3,16 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <OutputType>Exe</OutputType>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <LangVersion>preview</LangVersion>
+
         <Features>InterceptorsPreview</Features>
-        <NoWarn>$(NoWarn);CS9113</NoWarn>
         <InterceptorsPreviewNamespaces>$(InterceptorsPreviewNamespaces);CSharp12</InterceptorsPreviewNamespaces>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Dumpify" Version="0.6.0"/>
-    </ItemGroup>
 
 </Project>

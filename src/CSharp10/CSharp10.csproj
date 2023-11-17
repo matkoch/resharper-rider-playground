@@ -3,15 +3,8 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <OutputType>Exe</OutputType>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
 <!--        <LangVersion>9</LangVersion>-->
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Spectre.Console" Version="0.44.0" />
-        <PackageReference Update="JetBrains.Annotations" Version="2023.2.0" />
-    </ItemGroup>
 
     <!-- Navigate to CSharp10.GlobalUsings.g.cs after building the project -->
     <ItemGroup>

@@ -1,8 +1,6 @@
-using System.Threading.Channels;
-
 namespace CSharp12;
 
-public class LambdaDefaultValues
+file class LambdaDefaultValues
 {
     public void M()
     {

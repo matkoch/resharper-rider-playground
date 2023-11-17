@@ -2,13 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <LangVersion>preview</LangVersion>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Update="JetBrains.Annotations" Version="2023.2.0" />
-    </ItemGroup>
 
 </Project>

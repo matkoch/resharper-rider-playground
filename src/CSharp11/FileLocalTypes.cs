@@ -13,6 +13,6 @@ record DontShowThisAnywhereElse(string String, int Integer);
 
 file class FileClass
 {
-    // QF: fix modifier after uncommenting
+    // QF: fix access modifier after uncommenting
     // file enum NestedEnum { }
 }

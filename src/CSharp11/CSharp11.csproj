@@ -3,13 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <OutputType>Exe</OutputType>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <LangVersion>preview</LangVersion>
     </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Update="JetBrains.Annotations" Version="2023.2.0" />
-    </ItemGroup>
 
 </Project>

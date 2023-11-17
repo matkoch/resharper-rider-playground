@@ -1,6 +1,6 @@
 namespace CSharp11;
 
-public class AutoDefaultStructs
+file class AutoDefaultStructs
 {
     private struct Credentials
     {
