@@ -1,5 +1,8 @@
 namespace CSharp12;
 
+// TODO: Find Usages / Goto Type
+// TODO: Tooltip
+// TODO: QF
 file class TreeChecker : ITreeProcessor<List<(string Name, object? Value)>>
 {
     public bool ShouldProcessDescendants(INode element, List<(string Name, object? Value)> context)
