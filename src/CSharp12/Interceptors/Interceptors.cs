@@ -8,15 +8,37 @@ public static class Interceptors
     {
         Console.WriteLine("original");
         Console.WriteLine("original");
+
+        var p = new Person("Rick");
+        p.SayHi();
+        p.SayHi();
     }
 
     [InterceptsLocation(
         // TODO: Update path using 'Copy Path/Reference' action
         filePath: "/Users/matt/code/resharper-rider-playground/src/CSharp12/Interceptors/Interceptors.cs",
-        line: 9,
+        line: 10,
         column: 17)]
     public static void Intercept(string? message)
     {
         Console.WriteLine($"INTERCEPTED! Original message was '{message}'");
+    }
+
+    [InterceptsLocation(
+        // TODO: Update path using 'Copy Path/Reference' action
+        filePath: "/Users/matt/code/resharper-rider-playground/src/CSharp12/Interceptors/Interceptors.cs",
+        line: 14,
+        column: 11)]
+    public static void Intercept2(this Person p)
+    {
+        Console.WriteLine($"INTERCEPTED! {p.Name} is busy");
+    }
+
+    public record Person(string Name)
+    {
+        public void SayHi()
+        {
+            Console.WriteLine($"Hi, I'm {Name}");
+        }
     }
 }
