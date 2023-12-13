@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace CSharp11;
 
 public static class GenericAttributes

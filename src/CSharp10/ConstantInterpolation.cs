@@ -2,10 +2,10 @@ using System.Diagnostics;
 
 namespace CSharp10;
 
-public class ConstantInterpolation
+file class ConstantInterpolation
 {
     [DebuggerDisplay($"{nameof(FirstName)} = {{{{{nameof(FirstName)}}}}}")]
-    // CA: convert to string interpolation (in file, project, solution)
+    // TODO: CA: convert to string interpolation (in file, project, solution)
     [DebuggerDisplay(nameof(FirstName) + " = {{" + nameof(FirstName) + "}}")]
     public class Person
     {

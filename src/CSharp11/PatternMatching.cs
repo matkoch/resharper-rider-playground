@@ -1,5 +1,3 @@
-using CSharp11;
-
 namespace CSharp10;
 
 public class PatternMatching
@@ -36,7 +34,7 @@ public class PatternMatching
 
     private class Estimation
     {
-        public int Low;
         public int High;
+        public int Low;
     }
 }

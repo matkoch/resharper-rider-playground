@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 
 namespace CodeAnalysis
 {
@@ -7,7 +6,7 @@ namespace CodeAnalysis
     {
         public static void Start()
         {
-            // QF: convert to new API (in file, project, solution)
+            // TRY: QF: convert to new API (in file, project, solution)
             // Challenge: make this an error instead of a warning
             Assert.That(1 < 5, Is.True);
             Assert.That(string.IsNullOrWhiteSpace(""), Is.True);

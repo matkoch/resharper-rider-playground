@@ -1,20 +1,19 @@
 ﻿// QF: Remove redundant nullable directive
-#nullable enable
 
-using JetBrains.Annotations;
+#nullable enable
 
 namespace CodeAnalysis;
 
 public class NullableDirectives
 {
-    #nullable disable
+#nullable disable
     public string FirstName { get; set; }
 
     // QF: Remove redundant nullable directive
-    #nullable disable
+#nullable disable
     public string MiddleName { get; set; }
 
-    #nullable enable
+#nullable enable
     public string? LastName { get; set; }
 
     public virtual string GetNotNullValue() => "This is a string";

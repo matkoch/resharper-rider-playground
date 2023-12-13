@@ -2,16 +2,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharp10;
 
-public static class InterpolatedStringHandler
+file static class InterpolatedStringHandler
 {
     public static void Start()
     {
         var logger = new Logger();
-        // Goto definition on interpolation holes
+        // TODO: Goto definition on interpolation holes
         logger.LogDebug($"This is an {new object()} string handled by {nameof(DebugLoggerStringHandler)}");
 
         // TODO: should convert
-        logger.LogDebug("This is a {0} string that can be converted to {1}", "formatted", nameof(DebugLoggerStringHandler));
+        logger.LogDebug("This is a {0} string that can be converted to {1}", "formatted",
+            nameof(DebugLoggerStringHandler));
     }
 
     [InterpolatedStringHandler]
@@ -44,6 +45,7 @@ public static class InterpolatedStringHandler
     private class Logger
     {
         public LogLevel Level { get; set; }
+
         public void Log(LogLevel level, string message)
         {
             Console.WriteLine($"{level}: {message}");
@@ -68,5 +70,12 @@ public static class InterpolatedStringHandler
         }
     }
 
-    private enum LogLevel { Trace, Debug, Info, Warn, Error }
+    private enum LogLevel
+    {
+        Trace,
+        Debug,
+        Info,
+        Warn,
+        Error
+    }
 }

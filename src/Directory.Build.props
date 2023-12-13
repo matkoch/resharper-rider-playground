@@ -15,6 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Using Include="JetBrains.Annotations"/>
         <Using Include="Dumpify"/>
     </ItemGroup>
 

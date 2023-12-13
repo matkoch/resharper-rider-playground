@@ -2,7 +2,7 @@ namespace CodeAnalysis;
 
 public class Discards
 {
-    // QF: reserved discard name
+    // TRY: QF: reserved discard name
     // Inlay hints (push-to-hint ctrl)
     public void M()
     {
