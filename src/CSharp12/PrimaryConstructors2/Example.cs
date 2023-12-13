@@ -7,11 +7,18 @@ namespace CSharp12.PrimaryConstructors2;
 
 file class Base(string s);
 
-file class Derived(string s, int i, bool b) : Base(s)
+// TODO: semantic highlighting
+file class Derived : Base
 {
-    private readonly bool _b = b;
+    private readonly bool _b;
 
-    public int I { get; set; } = i;
+    public Derived(string s, int i, bool b) : base(s)
+    {
+        _b = b;
+        I = i;
+    }
+
+    public int I { get; set; }
     public string B => _b.ToString();
 }
 
