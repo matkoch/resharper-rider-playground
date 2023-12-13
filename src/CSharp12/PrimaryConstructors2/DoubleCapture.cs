@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 #pragma warning disable CS9113 // Parameter is unread.
 
 namespace CSharp12.PrimaryConstructors2;
@@ -8,19 +7,23 @@ public class DoubleCapture
 {
     public static void Run()
     {
-        var x = new Example1(1);
-        x.A.Dump();
-        x.A.Dump();
-        x.B.Dump();
+        var p = new Person(42);
+        p.Age.Dump();
+        p.Bio.Dump();
+
+        p.Age++;
+        p.Age.Dump();
+        p.Bio.Dump();
     }
 }
 
-file class Example1(int i)
+file class Person(int age)
 {
-    public int A => I++;
-    public int B => i++;
+    // initialization
+    public int Age { get; set; } = age;
 
-    private int I { get; set; } = i;
+    // capture
+    public string Bio => $"My age is {age}!";
 }
 
 // C# is unaware if Base captures the IService into it's state
@@ -37,13 +40,14 @@ file class Example2
         void DoSomething();
     }
 
-    // TODO: 1) extract service to property 2) replace captures
     private class Base(IService service)
     {
+        // TODO: 1) extract service to property
         // capture 1
         public void DoWorkInBase() => service.DoSomething();
     }
 
+    // TODO: 2) replace captures
     private class Derived(IService service)
         : Base(service)
     {
