@@ -12,6 +12,7 @@ public static class Interceptors
         var p = new Person("Rick");
         p.SayHi();
         p.SayHi();
+        p.SayHi();
     }
 
     [InterceptsLocation(
@@ -28,6 +29,11 @@ public static class Interceptors
         // TODO: Update path using 'Copy Path/Reference' action
         filePath: "/Users/matt/code/resharper-rider-playground/src/CSharp12/Interceptors/Interceptors.cs",
         line: 14,
+        column: 11)]
+    [InterceptsLocation(
+        // TODO: Update path using 'Copy Path/Reference' action
+        filePath: "/Users/matt/code/resharper-rider-playground/src/CSharp12/Interceptors/Interceptors.cs",
+        line: 15,
         column: 11)]
     public static void Intercept2(this Person p)
     {
