@@ -6,12 +6,15 @@ namespace CSharp12;
 
 file class DisposableWarning
 {
-    public void M()
+    public async void M()
     {
         var resource = CreateAndConfig();
         resource.DoWork();
 
         var resource2 = CreateAndConfig();
+        Handle(resource2);
+
+        var resource3 = await CreateAndConfigAsync();
         Handle(resource2);
     }
 
@@ -21,6 +24,16 @@ file class DisposableWarning
     {
         var resource = new HasNativeResources();
         resource.Confiure();
+        return resource;
+    }
+
+    // TODO: add MustDisposeResource
+    [MustDisposeResource]
+    async private Task<HasNativeResources> CreateAndConfigAsync()
+    {
+        var resource = new HasNativeResources();
+        resource.Confiure();
+        await Task.Delay(100);
         return resource;
     }
 
