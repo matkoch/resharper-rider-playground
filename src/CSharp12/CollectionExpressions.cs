@@ -1,5 +1,7 @@
 using System.Collections.Immutable;
 using System.Runtime.CompilerServices;
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedVariable
 
 namespace CSharp12;
 
@@ -15,6 +17,8 @@ public class CollectionExpressions
         H(new HashSet<int> { 1, 2, 3 }); // takes hashsets
         IA(ImmutableArray.Create(1, 2, 3)); // takes immutable arrays
 
+        IA(ImmutableArray.CreateRange(array));
+        IA(array.ToImmutableArray());
 
         A(new int[0]);
         L(new List<int>());
