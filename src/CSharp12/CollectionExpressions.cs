@@ -7,6 +7,7 @@ namespace CSharp12;
 
 public class CollectionExpressions
 {
+    // This piece of code is deep embedded in the business logic
     public static void M()
     {
         int[] array = [1, 2, 3];
