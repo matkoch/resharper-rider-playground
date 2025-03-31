@@ -11,7 +11,7 @@
 
     <ItemGroup>
         <PackageReference Include="Dumpify" Version="0.6.0"/>
-        <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
+        <PackageReference Include="JetBrains.Annotations" Version="2025.1.0-eap1"/>
     </ItemGroup>
 
     <ItemGroup>
