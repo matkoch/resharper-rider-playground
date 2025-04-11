@@ -11,8 +11,7 @@ file class CancellationTokenUsage
             using var cts1 = new CancellationTokenSource(millisecondsDelay: 3_000);
             await ExecuteWorkItemWithRetry(async (item, ct2) =>
             {
-                var processed = await TryProcessWorkItem(item,
-                    ct1);
+                var processed = await TryProcessWorkItem(item, ct1);
                 if (processed)
                     return true;
 
