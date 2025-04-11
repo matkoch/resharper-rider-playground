@@ -6,7 +6,7 @@
     <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <NoWarn>CA1822</NoWarn>
+    <NoWarn>CA1822;SYSLIB1014;CA2017</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
