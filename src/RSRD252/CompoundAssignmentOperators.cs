@@ -1,0 +1,19 @@
+#pragma warning disable CA1822
+namespace RSRD252;
+
+file class CompoundAssignmentOperators
+{
+    class Type
+    {
+        public int Value;
+        public void operator += (int v) => Value += v;
+        public void operator -= (int v) => Value -= v;
+        public void operator *= (int v) => Value *= v;
+        public void operator /= (int v) => Value /= v;
+        public void operator %= (int v) => Value %= v;
+        public void operator &= (int v) => Value &= v;
+        public void operator |= (int v) => Value |= v;
+        public void operator >>= (int v) => Value >>= v;
+        public void operator <<= (int v) => Value <<= v;
+    }
+}
