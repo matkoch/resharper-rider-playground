@@ -12,8 +12,10 @@ file class NullConditionalAssignment
 {
     void M(List<int?> numbers)
     {
-        numbers?.Capacity = 1;
+        if (numbers != null)
+            numbers.Capacity = 1;
 
-        numbers?[1] ??= 1;
+        if (numbers != null)
+            numbers[1] ??= 1;
     }
 }

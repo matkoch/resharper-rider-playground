@@ -10,6 +10,13 @@ public class PostfixTemplates
     //   number.yield
     public IEnumerable<int> FilterEvenNumbers(int[] numbers)
     {
+        foreach (var number in numbers)
+        {
+            if (number % 2 == 0)
+            {
+            }
+        }
+
         return null;
     }
 

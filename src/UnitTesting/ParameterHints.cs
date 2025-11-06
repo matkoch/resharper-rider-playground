@@ -11,7 +11,7 @@ public class ParameterHints
     // Parameter hints for test parameters (push-to-hint via Ctrl)
     [InlineData("foobar", 1337, true)]
     [InlineData("another long string", int.MinValue, false)]
-    [InlineAutoData("foobar", 0x_00001)]
+    [InlineAutoData("foobar", 0_00001)]
     public void Test(string str, int number, bool boolean)
     {
     }

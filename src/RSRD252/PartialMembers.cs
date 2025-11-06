@@ -16,9 +16,7 @@ file class PartialMembers
 
     partial class WeatherService
     {
-        partial WeatherService()
-        {
-        }
+        partial WeatherService() { }
 
         partial event EventHandler DataReceived
         {
