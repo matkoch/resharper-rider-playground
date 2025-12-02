@@ -10,4 +10,12 @@ public class MultiCaret
         var smurfAge = 125;
         Console.WriteLine($"{smurfName} was here and he is {smurfAge} years old!");
     }
+
+    private void MultiCaretTest01() { }
+    private void MultiCaretTest02() { }
+    private void MultiCaretTest03() { }
+    private void MultiCaretTest04() { }
+    private void MultiCaretTest05() { }
+    private void MultiCaretTest06() { }
+    private void MultiCaretTest07() { }
 }
